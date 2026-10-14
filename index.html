@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mi Calendario – Organizador de Tareas</title>
+<!-- Enlazamos la hoja de estilos CSS -->
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header><div class="w nav">
+  <div class="logo">📅 Mi Calendario</div>
+  <nav><a href="#app">Calendario</a><a href="#herr">Herramientas</a><a href="#como">Cómo funciona</a><a href="#cats">Categorías</a><a href="#faq">Preguntas</a></nav>
+</div></header>
+
+<div class="hero"><div class="w">
+  <h1>Organiza tus tareas y descubre con qué hacerlas</h1>
+  <p>Anota lo que tienes pendiente en el calendario. Mi Calendario analiza cada tarea y te recomienda páginas y aplicaciones para completarla más rápido.</p>
+  <a class="btn pri" href="#app">Empezar ahora</a><a class="btn gh" href="#como">¿Cómo funciona?</a>
+</div></div>
+
+<div class="w"><div class="stats">
+  <div class="stat"><b id="s1">0</b><span>Pendientes</span></div>
+  <div class="stat"><b id="s2">0</b><span>Completadas</span></div>
+  <div class="stat"><b id="s3">0</b><span>Para hoy</span></div>
+  <div class="stat"><b id="s4">0</b><span>Vencidas</span></div>
+</div></div>
+
+<section id="app"><div class="w">
+  <h2>Tu calendario</h2>
+  <p class="lead">Elige un día, agrega tus tareas y mira las herramientas sugeridas debajo de cada una.</p>
+  <div class="grid">
+    <div class="card">
+      <div class="head"><button id="prev" aria-label="Mes anterior">‹</button><b id="mes"></b><button id="next" aria-label="Mes siguiente">›</button></div>
+      <div class="dow"><span>L</span><span>M</span><span>X</span><span>J</span><span>V</span><span>S</span><span>D</span></div>
+      <div class="days" id="days"></div>
+    </div>
+    <div class="card">
+      <div class="head"><b id="fecha"></b><button id="hoy">Hoy</button></div>
+      <div id="aviso"></div>
+      <form id="f">
+        <input type="text" id="titulo" placeholder="Ej: Preparar exposición de biología" required maxlength="120">
+        <div class="row"><input type="date" id="dia" required><input type="time" id="hora"></div>
+        <button class="pri" type="submit">Agregar tarea</button>
+      </form>
+      <div id="lista"></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="herr"><div class="w">
+  <h2>Herramientas para tus tareas pendientes</h2>
+  <p class="lead">Un resumen de las páginas y apps más útiles según todo lo que tienes por hacer.</p>
+  <div class="tools" id="resumen"></div>
+</div></section>
+
+<section id="como"><div class="w">
+  <h2>¿Cómo funciona?</h2>
+  <p class="lead">Tres pasos y listo.</p>
+  <div class="steps">
+    <div class="card step"><div class="n">1</div><h3>Anota tu tarea</h3><p>Escribe qué tienes que hacer, el día y, si quieres, la hora.</p></div>
+    <div class="card step"><div class="n">2</div><h3>La analizamos</h3><p>Detectamos de qué se trata: estudio, presentación, compras, finanzas y más.</p></div>
+    <div class="card step"><div class="n">3</div><h3>Recibe recomendaciones</h3><p>Te mostramos páginas y apps concretas, con una línea sobre para qué sirve cada una.</p></div>
+  </div>
+</div></section>
+
+<section id="cats"><div class="w">
+  <h2>Tipos de tareas que reconocemos</h2>
+  <p class="lead">Cada categoría tiene su propio conjunto de herramientas.</p>
+  <div class="cats" id="catgrid"></div>
+</div></section>
+
+<section id="faq"><div class="w">
+  <h2>Preguntas frecuentes</h2>
+  <details><summary>¿Dónde se guardan mis tareas?</summary><p>En este navegador, en tu propio dispositivo. Si abres la página en otro equipo, no verás las mismas tareas.</p></details>
+  <details><summary>¿Qué pasa si mi tarea no encaja en ninguna categoría?</summary><p>Te sugerimos herramientas generales para organizarte y concentrarte, como Notion, Trello o un temporizador Pomodoro.</p></details>
+  <details><summary>¿Las recomendaciones son gratis?</summary><p>La mayoría de las herramientas sugeridas tienen una versión gratuita, pero algunas ofrecen planes de pago.</p></details>
+</div></section>
+
+<footer><div class="w">Mi Calendario · Proyecto de calendario de tareas con recomendaciones · Versión 2</div></footer>
+
+<!-- Enlazamos el archivo JavaScript -->
+<script src="js/app.js"></script>
+</body>
+</html>
